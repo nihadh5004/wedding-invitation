@@ -41,6 +41,29 @@ function Flower({ className = "" }) {
   );
 }
 
+function GeometricRosette({ className = "" }) {
+  return (
+    <svg
+      className={`geometric-rosette ${className}`}
+      viewBox="0 0 200 200"
+      aria-hidden="true"
+    >
+      <circle cx="100" cy="100" r="77" />
+      <rect x="46" y="46" width="108" height="108" rx="3" />
+      <rect
+        x="46"
+        y="46"
+        width="108"
+        height="108"
+        rx="3"
+        transform="rotate(45 100 100)"
+      />
+      <circle cx="100" cy="100" r="39" />
+      <circle cx="100" cy="100" r="8" />
+    </svg>
+  );
+}
+
 function App() {
   const [introOpen, setIntroOpen] = useState(true);
   const [timeRemaining, setTimeRemaining] = useState(getTimeRemaining);
@@ -93,10 +116,15 @@ function App() {
     <main className={introOpen ? "" : "invitation-open"}>
       <div className={`envelope ${introOpen ? "is-open" : "is-gone"}`}>
         <div className="envelope__paper">
+          <GeometricRosette className="envelope__rosette envelope__rosette--one" />
+          <GeometricRosette className="envelope__rosette envelope__rosette--two" />
+          <p className="arabic envelope__bismillah" lang="ar" dir="rtl">
+            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+          </p>
           <p className="eyebrow">Together with their families</p>
           <div className="seal"><span>J</span><i>&</i><span>S</span></div>
           <h1>You’re invited</h1>
-          <p>to celebrate a beautiful beginning</p>
+          <p>to the blessed Nikah celebration</p>
           <button type="button" onClick={() => setIntroOpen(false)}>
             Open invitation <span>→</span>
           </button>
@@ -104,6 +132,10 @@ function App() {
       </div>
 
       <section className="hero">
+        <div className="hero__geometry" aria-hidden="true">
+          <GeometricRosette className="hero__rosette hero__rosette--one" />
+          <GeometricRosette className="hero__rosette hero__rosette--two" />
+        </div>
         <Flower className="flower--left" />
         <Flower className="flower--right" />
         <nav aria-label="Wedding navigation">
@@ -115,7 +147,11 @@ function App() {
         </nav>
 
         <div className="hero__content">
-          <p className="eyebrow">With joyful hearts, we invite you to celebrate</p>
+          <p className="arabic hero__bismillah" lang="ar" dir="rtl">
+            بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+          </p>
+          {/* <div className="nikah-mark"><span /> Nikah <span /></div> */}
+          <p className="eyebrow">With joyful hearts, we invite you to celebrate our nikah</p>
           <h1>
             <span>Jasir</span>
             <i>&</i>
@@ -127,7 +163,7 @@ function App() {
             <span>4:00 PM</span>
           </div>
           <p className="hero__note">
-            Two little souls, one beautiful forever.
+            Two souls, united by His beautiful decree.
           </p>
           <a className="scroll-cue" href="#story" aria-label="Scroll to our story">
             <span>Discover our day</span>
@@ -160,10 +196,28 @@ function App() {
         </div>
       </section>
 
+      <section className="dua section" aria-labelledby="dua-title">
+        <GeometricRosette className="dua__rosette dua__rosette--left" />
+        <GeometricRosette className="dua__rosette dua__rosette--right" />
+        <div className="dua__inner">
+          <p className="eyebrow">A prayer for the couple</p>
+          <p className="arabic dua__arabic" id="dua-title" lang="ar" dir="rtl">
+            بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ
+            <br />
+            وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+          </p>
+          <span className="dua__ornament" aria-hidden="true">◆</span>
+          <p className="dua__translation">
+            May Allah bless you, shower His blessings upon you,
+            <br />and unite you both in goodness.
+          </p>
+        </div>
+      </section>
+
       <section className="details section" id="details">
         <div className="details__heading">
-          <p className="eyebrow">Save the date</p>
-          <h2>Our forever begins</h2>
+          <p className="eyebrow">The Nikah · Save the date</p>
+          <h2>Our blessed beginning</h2>
         </div>
         <div className="date-card">
           <span className="date-card__month">August</span>
@@ -237,7 +291,7 @@ function App() {
       </section>
 
       <footer>
-        <span>Made with love</span>
+        <span>Made with du’a & love</span>
         <div>J <i>&</i> S</div>
         <span>See you there</span>
       </footer>
