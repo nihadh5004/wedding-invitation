@@ -9,6 +9,21 @@ const names = {
 const venueMapUrl =
   "https://www.google.com/maps?q=11.4240655,75.8938564&entry=gps&lucs=,94297699,94275415,94284457,94231188,94280568,47071704,94218641,94282134,94298698,94286869&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAINeCAypaLDk0Mjk3Njk5LDk0Mjc1NDE1LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjk4Njk4LDk0Mjg2ODY5QgJJTg%3D%3D&skid=2316d284-2a2f-403b-b448-a79dd1f78e14&g_st=iw";
 
+const weddingDate = new Date("2026-08-16T16:00:00+05:30");
+
+function getTimeRemaining() {
+  const difference = weddingDate.getTime() - Date.now();
+
+  if (difference <= 0) return null;
+
+  return {
+    days: Math.floor(difference / 86400000),
+    hours: Math.floor((difference / 3600000) % 24),
+    minutes: Math.floor((difference / 60000) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
+  };
+}
+
 function Flower({ className = "" }) {
   return (
     <svg
@@ -28,6 +43,7 @@ function Flower({ className = "" }) {
 
 function App() {
   const [introOpen, setIntroOpen] = useState(true);
+  const [timeRemaining, setTimeRemaining] = useState(getTimeRemaining);
 
   useEffect(() => {
     document.body.style.overflow = introOpen ? "hidden" : "";
@@ -63,6 +79,14 @@ function App() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setTimeRemaining(getTimeRemaining());
+    }, 1000);
+
+    return () => window.clearInterval(timer);
   }, []);
 
   return (
@@ -151,6 +175,23 @@ function App() {
           </div>
           <div className="date-card__line" />
           <p>We can’t wait to celebrate with you</p>
+        </div>
+        <div className="countdown" aria-label="Countdown to the wedding">
+          {timeRemaining ? (
+            <>
+              <p>Counting every moment</p>
+              <div className="countdown__grid">
+                {Object.entries(timeRemaining).map(([label, value]) => (
+                  <div className="countdown__item" key={label}>
+                    <strong>{String(value).padStart(2, "0")}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <p className="countdown__arrived">Our celebration has begun</p>
+          )}
         </div>
       </section>
 

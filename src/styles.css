@@ -285,6 +285,53 @@ nav a:hover { opacity: 1; }
 }
 .date-card__line { width: 60px; height: 1px; margin: 35px auto 25px; background: var(--gold); }
 .date-card p { color: #b8c2b5; font: italic 1.2rem "Cormorant Garamond", serif; }
+.countdown {
+  width: min(700px, 100%);
+  margin: 52px auto 0;
+}
+.countdown > p {
+  margin: 0 0 22px;
+  color: #b8c2b5;
+  font: italic 1.05rem "Cormorant Garamond", serif;
+}
+.countdown__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(244,239,232,.18);
+  border-bottom: 1px solid rgba(244,239,232,.18);
+}
+.countdown__item {
+  position: relative;
+  padding: 24px 10px 22px;
+}
+.countdown__item + .countdown__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 1px;
+  height: 50%;
+  background: rgba(244,239,232,.18);
+}
+.countdown__item strong {
+  display: block;
+  color: var(--paper);
+  font: 400 clamp(1.8rem, 5vw, 3.1rem)/1 "Italiana", serif;
+  font-variant-numeric: tabular-nums;
+}
+.countdown__item span {
+  display: block;
+  margin-top: 10px;
+  color: #aeb9ac;
+  font-size: .52rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.countdown .countdown__arrived {
+  margin-bottom: 0;
+  color: #d7c7aa;
+  font-size: 1.5rem;
+}
 
 .venue {
   min-height: 700px;
@@ -416,6 +463,10 @@ footer span:last-child { text-align: right; }
   .date-card { padding-inline: 14px; }
   .date-card__time { gap: 8px; }
   .date-card__time strong { font-size: 2rem; }
+  .countdown { margin-top: 40px; }
+  .countdown__item { padding: 20px 4px 18px; }
+  .countdown__item strong { font-size: clamp(1.5rem, 9vw, 2.15rem); }
+  .countdown__item span { font-size: .45rem; letter-spacing: .12em; }
   .venue__map { min-height: 285px; border-width: 8px; }
   .coming-soon {
     align-items: center;
