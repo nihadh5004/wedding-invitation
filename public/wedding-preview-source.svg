@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="paper-grain" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r=".7" fill="#173a32" opacity=".035"/>
+      <circle cx="14" cy="13" r=".55" fill="#b39458" opacity=".045"/>
+    </pattern>
+    <style>
+      .serif { font-family: "Bodoni MT", Didot, "Times New Roman", serif; }
+      .sans { font-family: "Segoe UI", Arial, sans-serif; }
+      .line { fill: none; stroke: #809487; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .gold-line { fill: none; stroke: #b39458; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="#faf6ed"/>
+  <rect width="1200" height="630" fill="url(#paper-grain)"/>
+  <rect x="22" y="22" width="1156" height="586" rx="2" fill="none" stroke="#b39458" stroke-width="1.5"/>
+  <rect x="34" y="34" width="1132" height="562" rx="2" fill="none" stroke="#b39458" stroke-width=".6" opacity=".45"/>
+
+  <!-- Original botanical line artwork -->
+  <g opacity=".58">
+    <path class="line" d="M27 176C94 151 139 105 171 39"/>
+    <path class="line" d="M67 158C46 122 51 92 76 70c13 35 9 64-9 88Z"/>
+    <path class="line" d="M112 119c-1-39 17-65 51-78 1 38-16 65-51 78Z"/>
+    <path class="line" d="M93 137c36-7 65 3 86 30-38 8-66-2-86-30Z"/>
+    <path class="line" d="M145 78c32-11 58-5 79 18-33 12-59 6-79-18Z"/>
+    <circle cx="53" cy="169" r="4" fill="none" stroke="#b39458" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(1200 630) rotate(180)" opacity=".58">
+    <path class="line" d="M27 176C94 151 139 105 171 39"/>
+    <path class="line" d="M67 158C46 122 51 92 76 70c13 35 9 64-9 88Z"/>
+    <path class="line" d="M112 119c-1-39 17-65 51-78 1 38-16 65-51 78Z"/>
+    <path class="line" d="M93 137c36-7 65 3 86 30-38 8-66-2-86-30Z"/>
+    <path class="line" d="M145 78c32-11 58-5 79 18-33 12-59 6-79-18Z"/>
+    <circle cx="53" cy="169" r="4" fill="none" stroke="#b39458" stroke-width="1.5"/>
+  </g>
+
+  <g opacity=".32">
+    <path class="gold-line" d="M1174 146c-55-19-92-54-118-106"/>
+    <path class="gold-line" d="M1140 134c18-27 17-51-2-72-14 27-13 51 2 72Z"/>
+    <path class="gold-line" d="M1099 96c3-27-9-46-33-58-4 28 7 47 33 58Z"/>
+    <path class="gold-line" d="M1112 109c-28-8-52-3-70 16 28 9 52 4 70-16Z"/>
+  </g>
+
+  <g transform="translate(0 630) scale(1 -1)" opacity=".32">
+    <path class="gold-line" d="M26 146c55-19 92-54 118-106"/>
+    <path class="gold-line" d="M60 134c-18-27-17-51 2-72 14 27 13 51-2 72Z"/>
+    <path class="gold-line" d="M101 96c-3-27 9-46 33-58 4 28-7 47-33 58Z"/>
+    <path class="gold-line" d="M88 109c28-8 52-3 70 16-28 9-52 4-70-16Z"/>
+  </g>
+
+  <!-- Minimal wedding arch -->
+  <path d="M326 549V302C326 174 449 118 600 118s274 56 274 184v247"
+        fill="none" stroke="#b39458" stroke-width="1.4" opacity=".52"/>
+  <path d="M348 549V308C348 196 461 142 600 142s252 54 252 166v241"
+        fill="none" stroke="#809487" stroke-width=".8" opacity=".28"/>
+
+  <!-- Monogram and title -->
+  <text x="600" y="64" class="serif" fill="#173a32" text-anchor="middle"
+        font-size="25" letter-spacing="8">J &amp; S</text>
+  <text x="600" y="104" class="sans" fill="#687b70" text-anchor="middle"
+        font-size="16" font-weight="500" letter-spacing="8">WEDDING OF</text>
+
+  <g transform="translate(600 130)" fill="none" stroke="#b39458" stroke-width="1.2">
+    <path d="M-48 0H-12M12 0H48"/>
+    <path d="M0-8 8 0 0 8-8 0Z"/>
+  </g>
+
+  <!-- Names -->
+  <text x="600" y="240" class="serif" fill="#173a32" text-anchor="middle"
+        font-size="106" letter-spacing="-3">Jasir</text>
+  <text x="600" y="305" class="serif" fill="#b39458" text-anchor="middle"
+        font-size="48" font-style="italic">&amp;</text>
+  <text x="600" y="407" class="serif" fill="#173a32" text-anchor="middle"
+        font-size="106" letter-spacing="-3">Shesmin</text>
+
+  <!-- Date and invitation line -->
+  <g transform="translate(600 461)">
+    <path d="M-248 0H-94M94 0H248" stroke="#b39458" stroke-width="1.2"/>
+    <text x="0" y="7" class="sans" fill="#173a32" text-anchor="middle"
+          font-size="24" font-weight="500" letter-spacing="7">16 · 08 · 2026</text>
+  </g>
+
+  <text x="600" y="526" class="serif" fill="#526b60" text-anchor="middle"
+        font-size="25" font-style="italic">
+    With love, we invite you to celebrate with us
+  </text>
+
+  <g transform="translate(600 568)" fill="none" stroke="#b39458" stroke-width="1">
+    <circle r="13"/>
+    <rect x="-7" y="-7" width="14" height="14" transform="rotate(45)"/>
+    <circle r="3" fill="#b39458" stroke="none"/>
+  </g>
+</svg>
