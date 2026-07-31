@@ -121,7 +121,7 @@ function App() {
           <p className="arabic envelope__bismillah" lang="ar" dir="rtl">
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
           </p>
-          <p className="eyebrow">Together with their families</p>
+          {/* <p className="eyebrow">Together with our families</p> */}
           <div className="seal"><span>J</span><i>&</i><span>S</span></div>
           <h1>You’re invited</h1>
           <p>to the blessed Nikah celebration</p>
