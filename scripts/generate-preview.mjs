@@ -6,7 +6,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(scriptDirectory, "..");
 const sourcePath = join(projectRoot, "public", "wedding-preview-source.svg");
-const outputPath = join(projectRoot, "public", "wedding-preview.png");
+const outputPath = join(projectRoot, "public", "arshad-jumana-wedding-preview.png");
 
 const browserCandidates = [
   process.env.CHROME_PATH,
@@ -62,5 +62,5 @@ if (signature !== "89504e470d0a1a0a" || width !== 1200 || height !== 630) {
 }
 
 console.log(
-  `Generated public/wedding-preview.png (${width}x${height}, ${png.length} bytes).`
+  `Generated public/arshad-jumana-wedding-preview.png (${width}x${height}, ${png.length} bytes).`
 );
