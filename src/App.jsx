@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import childhoodPhoto from "./childhoodphoto.jpeg";
 
 const names = {
-  groom: "Jasir Hussain",
-  bride: "Dr. Fathima Shesmin PT",
+  groom: "Arshad",
+  bride: "Jumana",
 };
 
 const venueMapUrl =
-  "https://www.google.com/maps?q=11.4240655,75.8938564&entry=gps&lucs=,94297699,94275415,94284457,94231188,94280568,47071704,94218641,94282134,94298698,94286869&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAINeCAypaLDk0Mjk3Njk5LDk0Mjc1NDE1LDk0Mjg0NDU3LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjk4Njk4LDk0Mjg2ODY5QgJJTg%3D%3D&skid=2316d284-2a2f-403b-b448-a79dd1f78e14&g_st=iw";
+  "https://maps.app.goo.gl/NJf9oBjQoPcdaMQL6";
 
-const weddingDate = new Date("2026-08-16T16:00:00+05:30");
+const weddingDate = new Date("2026-11-22T18:00:00+05:30");
 
 function getTimeRemaining() {
   const difference = weddingDate.getTime() - Date.now();
@@ -122,7 +122,7 @@ function App() {
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
           </p>
           {/* <p className="eyebrow">Together with our families</p> */}
-          <div className="seal"><span>J</span><i>&</i><span>S</span></div>
+          <div className="seal"><span>A</span><i>&</i><span>J</span></div>
           <h1>You’re invited</h1>
           <p>to the blessed Nikah celebration</p>
           <button type="button" onClick={() => setIntroOpen(false)}>
@@ -141,7 +141,7 @@ function App() {
         <nav aria-label="Wedding navigation">
           <a href="#story">Our story</a>
           <a href="#details">The day</a>
-          <div className="nav-monogram">J <i>&</i> S</div>
+          <div className="nav-monogram">A <i>&</i> J</div>
           <a href="#venue">Venue</a>
           <a href="#rsvp">Celebrate</a>
         </nav>
@@ -153,14 +153,14 @@ function App() {
           {/* <div className="nikah-mark"><span /> Nikah <span /></div> */}
           <p className="eyebrow">With joyful hearts, we invite you to celebrate our nikah</p>
           <h1>
-            <span>Jasir</span>
+            <span>{names.groom}</span>
             <i>&</i>
-            <span>Shesmin</span>
+            <span>{names.bride}</span>
           </h1>
-          <div className="date-lockup" aria-label="August 16 at 4 PM">
-            <span>August</span>
-            <strong>16</strong>
-            <span>4:00 PM</span>
+          <div className="date-lockup" aria-label="November 22, 2026, at 6 PM onwards">
+            <span>November</span>
+            <strong>22</strong>
+            <span>6:00 PM<br /><small>onwards</small></span>
           </div>
           <p className="hero__note">
             Two souls, united by His beautiful decree.
@@ -177,7 +177,7 @@ function App() {
           <img
             className="childhood-photo"
             src={childhoodPhoto}
-            alt="Jasir and Shesmin together as children"
+            alt="Arshad and Jumana together as children"
           />
           <span className="tape tape--top" />
           <span className="tape tape--bottom" />
@@ -192,7 +192,7 @@ function App() {
             one. Now, surrounded by the people who made us who we are, we’re
             stepping into our favourite chapter yet.
           </p>
-          <p className="signature">Jasir & Shesmin</p>
+          <p className="signature">{names.groom} & {names.bride}</p>
         </div>
       </section>
 
@@ -220,13 +220,14 @@ function App() {
           <h2>Our blessed beginning</h2>
         </div>
         <div className="date-card">
-          <span className="date-card__month">August</span>
-          <strong>16</strong>
-          <div className="date-card__time" aria-label="At 4:00 PM">
+          <span className="date-card__month">November</span>
+          <strong>22</strong>
+          <div className="date-card__time" aria-label="At 6:00 PM onwards">
             <span>at</span>
-            <strong>04:00</strong>
+            <strong>06:00</strong>
             <em>PM</em>
           </div>
+          <p>onwards</p>
           <div className="date-card__line" />
           <p>We can’t wait to celebrate with you</p>
         </div>
@@ -252,22 +253,22 @@ function App() {
       <section className="venue section" id="venue">
         <div className="venue__map">
           <iframe
-            title="Map showing Alora, our home"
-            src="https://www.google.com/maps?q=11.4240655,75.8938564&z=18&output=embed"
+            title="Map showing Home, our home"
+            src="https://www.google.com/maps?q=11.416324,75.872023&z=18&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
         <div className="venue__copy">
           <p className="eyebrow">Where we’ll gather</p>
-          <h2>At our Alora,<br />with all of you</h2>
+          <h2>At our Home,<br />with all of you</h2>
           <p>
             We look forward to welcoming you to our home for this special
             celebration.
           </p>
           <p className="venue__landmark">
             <span>Nearby landmark</span>
-            Salamath Nagar Juma Masjid
+            Iyyad Juma'a Masjid
           </p>
           <div className="coming-soon">
             <span>Directions</span>
@@ -287,12 +288,12 @@ function App() {
           <i>&</i>
           <span>{names.bride}</span>
         </div>
-        <div className="final-date">16 · 08 · 2026  <span>at 4:00 PM</span></div>
+        <div className="final-date">22 · 11 · 2026  <span>at 6:00 PM onwards</span></div>
       </section>
 
       <footer>
         <span>Made with du’a & love</span>
-        <div>J <i>&</i> S</div>
+        <div>A <i>&</i> J</div>
         <span>See you there</span>
       </footer>
     </main>

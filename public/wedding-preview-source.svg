@@ -76,15 +76,15 @@
       </g>
 
       <text x="600" y="190" class="serif" fill="#153b32" text-anchor="middle"
-            font-size="82" letter-spacing="-2">Jasir</text>
+            font-size="82" letter-spacing="-2">Arshad</text>
       <text x="600" y="238" class="serif" fill="#b39458" text-anchor="middle"
             font-size="39" font-style="italic">&amp;</text>
       <text x="600" y="306" class="serif" fill="#153b32" text-anchor="middle"
-            font-size="82" letter-spacing="-2">Shesmin</text>
+            font-size="82" letter-spacing="-2">Jumana</text>
 
       <path d="M492 323H708" stroke="#b39458" stroke-width="1"/>
       <text x="600" y="354" class="sans" fill="#173a32" text-anchor="middle"
-            font-size="21" font-weight="500" letter-spacing="5.5">16 · 08 · 2026</text>
+            font-size="21" font-weight="500" letter-spacing="5.5">22 · 11 · 2026</text>
     </g>
 
     <!-- Side folds and front flap -->
@@ -100,6 +100,8 @@
           font-size="25" font-style="italic">
       With love, we invite you to celebrate with us
     </text>
+    <text x="600" y="542" class="sans" fill="#d5c297" text-anchor="middle"
+          font-size="13" letter-spacing="2">6:00 PM ONWARDS</text>
 
     <!-- Floral monogram wax seal -->
     <g transform="translate(796 440)" filter="url(#seal-shadow)">
@@ -111,7 +113,7 @@
       <path d="M-8-22c-8-2-12 2-13 10 8 0 12-3 13-10ZM8-22c8-2 12 2 13 10-8 0-12-3-13-10ZM-5 21c-8 0-12-4-12-12 8 1 12 5 12 12ZM5 21c8 0 12-4 12-12-8 1-12 5-12 12Z"
             fill="none" stroke="#f7edda" stroke-width="1"/>
       <text x="0" y="7" class="serif" fill="#fff8ea" text-anchor="middle"
-            font-size="20" font-weight="500">J &amp; S</text>
+            font-size="20" font-weight="500">A &amp; J</text>
     </g>
   </g>
 
